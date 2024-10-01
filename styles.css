@@ -1,0 +1,90 @@
+body {
+  background-color: lightgrey;
+  font-family: "Roboto", sans-serif;
+  background-image: url(cloudss.jpg);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.weather-app {
+  background-color: white;
+  max-width: 700px;
+
+  margin: 40px auto;
+  box-shadow: 0 30px 50px 20px rgba(100, 213, 121, 0.5);
+  border-radius: 17px;
+  padding: 30px;
+}
+
+a {
+  color: #3cb371;
+}
+
+header {
+  border-bottom: 1px solid #3cb371;
+  padding: 20px;
+  background-image: url(header.jpg);
+}
+main {
+  background-color: #dff2e8;
+}
+.weather-details {
+  opacity: 50%;
+}
+.search-form-input {
+  background-color: ghostwhite;
+  border: none;
+  border-radius: 4px;
+  width: 70%;
+  padding: 15px 20px;
+  font-size: 15px;
+}
+.search-form-button {
+  background-color: #3cb371;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  width: 20%;
+  color: honeydew;
+  font-size: 14px;
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+.city-output {
+  margin: 0;
+  line-height: 50px;
+}
+.humidity {
+  color: darkgreen;
+  font-size: 20px;
+}
+.wind-speed {
+  color: darkgreen;
+  font-size: 20px;
+}
+.current-temp-container {
+  display: flex;
+}
+.temp {
+  font-size: 55px;
+}
+.units {
+  margin-right: 30px;
+}
+
+footer {
+  border-top: 1px solid #3cb371;
+  padding: 20px;
+  font-size: 10px;
+  text-align: right;
+  color: darkgreen;
+  font-weight: 300;
+  background-color: lightgrey;
+}

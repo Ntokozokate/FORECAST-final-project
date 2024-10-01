@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+ <title>Kate Weather App</title>
+  <body>
+    
+    <div class="weather-app">
+      <header>
+        
+        <form class="search-form"
+        id="search-form"
+        > 
+          <input type="search" 
+          class="search-form-input" 
+          placeholder="Enter City" 
+          required 
+          id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button"/>
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+        <div class="city-climate">
+          <h1 class="city-output"
+          id="city-output">Miami</h1>
+          <p class="weather-details">
+            <span id="time">Tuesday 23:00</span>            
+             , 
+             <span id="weather-description">☁︎Its overcast cloudy</span>
+              <br />
+            Humidity: <span 
+            id="humidity"
+            class="humidity">40</span>  % , Wind: <span 
+            id="wind-speed"
+            class="wind-speed"> 15 </span>km/hr
+          </p>
+        </div>
+        <div class="current-temp-container">
+          <h2>
+              🌦️
+             <span 
+             class="temp"
+             id="temp">  12</span>   
+            <span class="units">  ℃  </span> 
+           
+          </h2>
+
+        </div>
+
+      </div>
+      <br><br>
+      <small>weather data</small>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Ntokozokate" target="_blank"
+          >Ntokozo Kate Moyo</a
+        >
+        and it is Open-Sourced on
+        <a
+          href="https://github.com/Ntokozokate/WEEK-7-WEATHER-APP"
+          target="_blank"
+          >Github</a
+        >
+        and hosted by
+        <a href="https://katenm-weather-app.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
