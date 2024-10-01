@@ -7,6 +7,11 @@ function refreshWeather(response) {
   let weatherCondition = document.querySelector("#weather-description");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  //iconImage = response.data.condition.icon;
+  //console.log(response.condition.icon_url);
+  let iconImg = document.querySelector("#icon");
+
+  iconImg.innerHTML = `<img src="${response.data.condition.icon_url}" class="cloud-img"/>`;
 
   timeElement.innerHTML = formatDate(date);
 

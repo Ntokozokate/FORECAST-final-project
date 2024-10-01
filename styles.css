@@ -14,7 +14,7 @@ body {
   max-width: 700px;
 
   margin: 40px auto;
-  box-shadow: 0 30px 50px 20px rgba(100, 213, 121, 0.5);
+  box-shadow: 0 30px 50px 20px rgba(66, 140, 79, 0.5);
   border-radius: 17px;
   padding: 30px;
 }
@@ -57,6 +57,10 @@ main {
   justify-content: space-between;
   line-height: 20px;
 }
+.city-climate {
+  background-color: rgb(171, 183, 196);
+  border-radius: 10px;
+}
 .city-output {
   margin: 0;
   line-height: 50px;
@@ -69,14 +73,20 @@ main {
   color: darkgreen;
   font-size: 20px;
 }
+.icon {
+  font-size: 0px;
+  max-width: 1px;
+}
 .current-temp-container {
-  display: flex;
+  background-color: rgb(171, 183, 196);
+  border-radius: 10px;
 }
 .temp {
-  font-size: 55px;
+  font-size: 80px;
+
+  margin: 5px;
 }
 .units {
-  margin-right: 30px;
 }
 
 footer {
