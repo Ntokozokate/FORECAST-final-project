@@ -54,7 +54,7 @@ main {
 
 .weather-app-data {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   line-height: 20px;
 }
 .city-climate {
@@ -73,22 +73,43 @@ main {
   color: darkgreen;
   font-size: 20px;
 }
-.icon {
-  font-size: 0px;
-  max-width: 1px;
-}
+
 .current-temp-container {
   background-color: rgb(171, 183, 196);
   border-radius: 10px;
+  width: 240px;
+  justify-content: space-around;
 }
 .temp {
-  font-size: 80px;
-
+  font-size: 70px;
   margin: 5px;
 }
-.units {
-}
 
+.forecast-data {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+
+  opacity: 0.7;
+}
+.weather-forecast {
+  background-color: aliceblue;
+  border-radius: 15px;
+}
+.forecast-temperatures {
+  display: flex;
+  justify-content: space-around;
+}
+.forecast-temps {
+  display: flex;
+  justify-content: space-around;
+  color: #0e582f;
+}
+.forecast-temp {
+  padding: 4px;
+}
 footer {
   border-top: 1px solid #3cb371;
   padding: 20px;
