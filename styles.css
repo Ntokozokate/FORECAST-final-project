@@ -98,6 +98,14 @@ main {
   background-color: aliceblue;
   border-radius: 15px;
 }
+.forecast-date {
+  opacity: 0.6;
+}
+
+.forecast-icon {
+  font-size: 40px;
+  padding: 10px;
+}
 .forecast-temperatures {
   display: flex;
   justify-content: space-around;
