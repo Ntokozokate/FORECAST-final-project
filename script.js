@@ -1,5 +1,5 @@
 function refreshWeather(response) {
-  console.log(response.data.temperature.current);
+  //console.log(response.data.temperature.current);
 
   let currentTemp = document.querySelector("#temp");
   let currentHumidity = document.querySelector("#humidity");
@@ -7,11 +7,6 @@ function refreshWeather(response) {
   let weatherCondition = document.querySelector("#weather-description");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  //iconImage = response.data.condition.icon;
-  //console.log(response.condition.icon_url);
-  let iconImg = document.querySelector("#icon");
-
-  iconImg.innerHTML = `<img src="${response.data.condition.icon_url}" class="cloud-img"/>`;
 
   timeElement.innerHTML = formatDate(date);
 
@@ -23,9 +18,8 @@ function refreshWeather(response) {
 
   weatherCondition.innerHTML = response.data.condition.description;
 
-  console.log(response.data);
-
-  console.log(response.data.condition.description);
+  //console.log(response.data);
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let hours = date.getHours();
@@ -65,8 +59,16 @@ function searchWeather(event) {
   cityElement.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
+function getForecast(city) {
+  let apiKey = `3b1f6a3cf426c8fo47d42200c9911tba`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(dispayForecast);
+  //console.log(apiUrl);
+}
 
-function dispayForecast() {
+function dispayForecast(response) {
+  console.log(response.data.city);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -85,7 +87,24 @@ function dispayForecast() {
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHtml;
 }
-dispayForecast();
+
+searchCity("Harare");
+
+//dispayForecast();
+
+//function dispalyMonths() {
+//let months = ["Jan", "Feb", "Mar", "Apr", "May", "June"];
+//let monthHtml = "";
+
+//months.forEach(function (month) {
+//monthHtml =
+//monthHtml +
+//` I hate to be the bearer for bad news but on the months of ${month} you wont be working here`;
+//});
+//let monthElement = document.querySelector("#monthss");
+//monthElement = monthHtml;
+//}
+//dispalyMonths();
 
 let seachFormElement = document.querySelector("#search-form");
 seachFormElement.addEventListener("submit", searchWeather);
