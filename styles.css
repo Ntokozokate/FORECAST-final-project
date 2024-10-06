@@ -88,23 +88,24 @@ main {
 .forecast-data {
   display: flex;
   justify-content: space-evenly;
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
-  font-size: 20px;
-
-  opacity: 0.7;
+  font-size: 17px;
+  padding: 15px;
+  opacity: 0.9;
 }
 .weather-forecast {
   background-color: aliceblue;
   border-radius: 15px;
+  margin: 5px;
 }
 .forecast-date {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .forecast-icon {
-  font-size: 40px;
-  padding: 10px;
+  width: 60px;
+  padding: 2px;
 }
 .forecast-temperatures {
   display: flex;
